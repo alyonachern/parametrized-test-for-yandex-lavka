@@ -9,7 +9,7 @@ public class TestBase {
     static void beforeAll() {
         Configuration.baseUrl = "https://lavka.yandex.ru";
         Configuration.pageLoadStrategy = "eager";
-        Configuration.browserSize = "1600x900";
+        Configuration.browserSize = "1920x1080";
         Configuration.holdBrowserOpen = false;
     }
 }
