@@ -8,8 +8,7 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class MainPage {
 
-    private SelenideElement sidebar = $(".w1ucdt7p"),
-            searchBar = $("#search-input-id");
+    private SelenideElement searchBar = $("#search-input-id");
 
     private ElementsCollection catalog = $$("#root nav");
     public static String[] catalogElements = {
@@ -99,15 +98,6 @@ public class MainPage {
                     "Всё для пикника и вечеринки\n" +
                     "Для школы и офиса"
     };
-
-    public SelenideElement getSidebarElement(String element) {
-        return sidebar.$(byTagAndText("span", element));
-    }
-
-    public MainPage clickSideBarElement(String element) {
-        getSidebarElement(element).click();
-        return this;
-    }
 
     public MainPage openMainPage(String url) {
         open(url);
