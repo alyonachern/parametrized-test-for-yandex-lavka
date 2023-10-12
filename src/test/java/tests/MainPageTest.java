@@ -24,8 +24,8 @@ public class MainPageTest extends TestBase {
     @Tags({@Tag("UI"), @Tag("Search"), @Tag("Smoke")})
     @CsvSource(value = {"молоко, Вот что мы нашли по запросу «молоко»", "пицца, Вот что мы нашли по запросу «пицца»", "сыр, Вот что мы нашли по запросу «сыр»", "семечки, Вот что мы нашли по запросу «семечки»"})
     public void searchTest(String searchValue, String headerResult) {
-        mainPage.openMainPage().searchValue(searchValue);
 
+        mainPage.openMainPage().searchValue(searchValue);
         searchPage.checkResult(headerResult);
     }
 
@@ -50,8 +50,8 @@ public class MainPageTest extends TestBase {
     @Tags({@Tag("UI"), @Tag("Cart"), @Tag("Regress")})
     @ValueSource(strings = {"детское питание", "йогурт"})
     public void checkCartTest(String searchValue) {
-        mainPage.openMainPage().searchValue(searchValue);
 
+        mainPage.openMainPage().searchValue(searchValue);
         searchPage.checkCartHidden();
     }
 }

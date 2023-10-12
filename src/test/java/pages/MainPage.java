@@ -11,7 +11,6 @@ import static com.codeborne.selenide.Selenide.*;
 public class MainPage {
 
     private SelenideElement searchBar = $("#search-input-id");
-
     private ElementsCollection catalogElement = $$("#main-content-id a h2 span span");
 
     public MainPage openMainPage() {
