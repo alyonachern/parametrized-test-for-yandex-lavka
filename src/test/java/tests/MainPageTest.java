@@ -25,7 +25,8 @@ public class MainPageTest extends TestBase {
     @CsvSource(value = {"молоко, Вот что мы нашли по запросу «молоко»", "пицца, Вот что мы нашли по запросу «пицца»", "сыр, Вот что мы нашли по запросу «сыр»", "семечки, Вот что мы нашли по запросу «семечки»"})
     public void searchTest(String searchValue, String headerResult) {
 
-        mainPage.openMainPage().searchValue(searchValue);
+        mainPage.openMainPage()
+                .searchValue(searchValue);
         searchPage.checkResult(headerResult);
     }
 
@@ -39,8 +40,9 @@ public class MainPageTest extends TestBase {
     @ParameterizedTest(name = "По клику на пункт каталога {0} отображатеся заголовок {1}")
     @Tags({@Tag("UI"), @Tag("Catalog"), @Tag("Regress")})
     public void checkCatalogTitle(String element, String title) {
-        mainPage.openMainPage().getCatalogElement(element).click();
 
+        mainPage.openMainPage()
+                .getCatalogElement(element).click();
         catalogPage.checkTitle(title);
 
     }
@@ -51,7 +53,8 @@ public class MainPageTest extends TestBase {
     @ValueSource(strings = {"детское питание", "йогурт"})
     public void checkCartTest(String searchValue) {
 
-        mainPage.openMainPage().searchValue(searchValue);
+        mainPage.openMainPage()
+                .searchValue(searchValue);
         searchPage.checkCartHidden();
     }
 }
